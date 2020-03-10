@@ -1,0 +1,4 @@
+GET http://localhost:8080/student/add?number=123&name=Tom&sex=0&classId=1&birthDay=2010-12-12
+Accept: application/json
+
+###
