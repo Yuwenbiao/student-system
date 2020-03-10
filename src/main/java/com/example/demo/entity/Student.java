@@ -23,7 +23,7 @@ public class Student {
      */
     private String name;
     /**
-     * 性别
+     * 性别（0：男性 1：女性）
      */
     private Integer sex;
     /**
