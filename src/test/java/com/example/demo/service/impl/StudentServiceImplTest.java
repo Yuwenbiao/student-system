@@ -9,6 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
 @SpringBootTest
 class StudentServiceImplTest {
     @Autowired
@@ -17,12 +20,13 @@ class StudentServiceImplTest {
     @Test
     void testAddStudent() {
         Student student = new Student();
-        student.setNumber(123);
+        student.setNumber(126);
         student.setName("Tom");
         student.setSex(0);
         student.setBirthDay("2010-12-12");
         student.setClassId(1);
-        studentService.addStudent(student);
+        int result = studentService.addStudent(student);
+        assertEquals(result, 1);
     }
 
     @Test

@@ -19,7 +19,7 @@ public interface StudentMapper {
      *
      * @param student 学生信息
      */
-    void addStudent(Student student);
+    int addStudent(Student student);
 
     /**
      * 删除学生

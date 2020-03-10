@@ -17,7 +17,7 @@ public interface StudentService {
      *
      * @param student 学生信息
      */
-    void addStudent(Student student);
+    int addStudent(Student student);
 
     /**
      * 更新学生信息

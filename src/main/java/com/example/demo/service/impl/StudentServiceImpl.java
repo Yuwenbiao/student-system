@@ -27,8 +27,8 @@ public class StudentServiceImpl implements StudentService {
      * @param student 学生信息
      */
     @Override
-    public void addStudent(Student student) {
-        studentMapper.addStudent(student);
+    public int addStudent(Student student) {
+        return studentMapper.addStudent(student);
     }
 
     /**
