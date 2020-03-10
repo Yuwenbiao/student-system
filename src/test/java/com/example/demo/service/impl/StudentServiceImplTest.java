@@ -38,7 +38,7 @@ class StudentServiceImplTest {
 
     @Test
     void testCountStudent() {
-        CountAll countAll = studentService.countStudent(null);
+        List<CountAll> countAll = studentService.countStudent(null);
         System.out.println(countAll.toString());
     }
 
@@ -46,7 +46,7 @@ class StudentServiceImplTest {
     void testCountStudentSex() {
         Student student = new Student();
         student.setSex(0);
-        CountAll countAll = studentService.countStudent(student);
+        List<CountAll> countAll = studentService.countStudent(student);
         System.out.println(countAll.toString());
     }
 

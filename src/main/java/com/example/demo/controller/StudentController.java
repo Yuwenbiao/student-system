@@ -94,10 +94,10 @@ public class StudentController {
     @RequestMapping("count_all")
     public JSONObject countAllStudent() {
         JSONObject result = new JSONObject();
-        CountAll countAll = studentService.countStudent(null);
+        List<CountAll> countAllList = studentService.countStudent(null);
 
         result.put("code", SUCCESS);
-        result.put("countAll", countAll);
+        result.put("countAll", countAllList);
         return result;
     }
 
@@ -113,7 +113,7 @@ public class StudentController {
         Student student = new Student();
         student.setSex(sex);
 
-        CountAll countAll = studentService.countStudent(student);
+        List<CountAll> countAll = studentService.countStudent(student);
         result.put("code", SUCCESS);
         result.put("countAll", countAll);
         return result;
@@ -121,8 +121,8 @@ public class StudentController {
 
     /**
      * 导出数据到Excel中
-     * 可以利用POI实现，具体实现略
      */
+    @RequestMapping("export")
     public JSONObject exportStudent() {
         JSONObject result = new JSONObject();
         studentService.exportStudentsToExcel();

@@ -48,5 +48,5 @@ public interface StudentMapper {
      *
      * @param student 查询条件
      */
-    CountAll countStudent(Student student);
+    List<CountAll> countStudent(Student student);
 }

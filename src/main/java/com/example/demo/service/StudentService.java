@@ -48,7 +48,7 @@ public interface StudentService {
      *
      * @return 统计结果
      */
-    CountAll countStudent(Student student);
+    List<CountAll> countStudent(Student student);
 
     /**
      * 将学生信息导出excel

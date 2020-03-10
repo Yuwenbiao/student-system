@@ -65,7 +65,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public CountAll countStudent(Student student) {
+    public List<CountAll> countStudent(Student student) {
         return studentMapper.countStudent(student);
     }
 

@@ -1,4 +1,47 @@
-GET http://localhost:8080/student/add?number=123&name=Tom&sex=0&classId=1&birthDay=2010-12-12
+###
+#生成excel
+GET http://localhost:8080/student/export
+
+###
+#统计班级人数（女）
+GET http://localhost:8080/student/count_sex?sex=1
+Accept: application/json
+
+###
+
+#统计班级人数
+GET http://localhost:8080/student/count_all
+Accept: application/json
+
+###
+#查询学生（班级）
+GET http://localhost:8080/student/query?classId=1
+Accept: application/json
+
+###
+###
+#查询学生（姓名）
+GET http://localhost:8080/student/query?name=o
+Accept: application/json
+
+###
+#查询学生（学号）
+GET http://localhost:8080/student/query?number=124
+Accept: application/json
+
+###
+#删除学生
+GET http://localhost:8080/student/delete?number=123
+Accept: application/json
+
+###
+#修改学生
+GET http://localhost:8080/student/edit?number=123&name=Tom1&sex=0&classId=1&birthDay=2010-12-12
+Accept: application/json
+
+###
+#添加学生
+GET http://localhost:8080/student/add?number=1233&name=Smith&sex=1&classId=2&birthDay=2010-12-12
 Accept: application/json
 
 ###
